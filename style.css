@@ -1,0 +1,239 @@
+   
+    *{        
+        scroll-behavior: smooth;
+    }
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+         overflow: visible;
+        }
+
+      
+      .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(assets/wallpaper3.png);
+        background-size: cover;
+        background-position: center;
+        z-index: -2;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+      }
+
+      /* İçerik alanı */
+      nav{
+        position: relative;
+        z-index: 0;
+      }
+      .game-container {
+        margin-top: 40px;
+        position: relative;
+        z-index: 0;
+      }
+
+      .game2-container {
+        margin-top: 40px;
+        position: relative;
+        z-index: 0;
+      }
+
+      nav {
+        background-color: rgba(255, 228, 196, 0.8);
+        color: black;
+        padding: 0.25rem;
+        text-align: center;
+      }
+
+      .game-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+       .game2-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      iframe {
+        border: 1px solid rgb(225, 0, 245);
+        width: 870px;
+        height: 695px;
+        max-width: 100%;
+        box-shadow: rgb(1, 124, 255) 0px 20px 30px -10px;
+        border-radius: 8px;
+      }
+      /* Scrollbar Özelleştirme BAşlangıç*/
+      ::-webkit-scrollbar {
+        width: 20px;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: rgb(219, 219, 219);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+          to bottom,
+          rgb(0, 157, 255),
+          rgb(255, 0, 255)
+        );
+      }
+
+
+      .arabilgi{
+        border-radius: 10px;
+        margin-top: 80px;
+        color: rgb(5, 1, 1);      
+        background: linear-gradient(90deg, rgb(235, 66, 94) 15%, blue 33%, green 60%, orange 100%);           
+        width: 100%;
+        height: 100px;
+        align-items: center;        
+        font-style: oblique;        
+        }
+
+        .summer{
+        font-family: "Edu VIC WA NT Hand", cursive;
+        font-optical-sizing: auto;       
+        font-style: normal;        
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;        
+        align-items: center;           
+        }
+        .side-menu {
+            position: fixed;
+            top: 25%;   
+            right: 10px; 
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: rgba(238, 103, 103, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+            z-index: 999;
+          }
+
+        /* Menü linkleri */
+        .side-menu a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        color: black;
+        text-decoration: none;
+        border-radius: 50%;
+        transition: background-color 0.3s, color 0.3s;
+        cursor: pointer;
+        }
+
+        .side-menu a:hover {
+        background-color: rgb(0, 157, 255);
+        color: white;
+        }
+
+
+  .info-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* her şeyin üstünde */
+}
+
+.info-modal-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  font-size: 18px;
+}
+
+#close-modal {
+  margin-top: 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#close-modal:hover {
+  background-color: #2980b9;
+}
+
+.fa-flag{
+  color: green;
+  font-size: 40px;
+}
+.fa-stop{
+  color: red;
+  font-size: 40px;
+}
+
+.fa-user-secret{
+  background: linear-gradient(
+          to bottom,
+          rgb(0, 157, 255),
+          rgb(255, 0, 255)
+        );
+  font-size: 40px;
+}
+
+.custom-footer {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.2); /* yarı şeffaf beyaz */
+  color: #fc4343;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  z-index: 100;
+  backdrop-filter: blur(4px); /* hafif arka plan bulanıklığı efekti */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-footer a {
+  color: #fd6e22;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.custom-footer a:hover {
+  text-decoration: underline;
+}
